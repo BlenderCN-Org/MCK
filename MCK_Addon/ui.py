@@ -83,7 +83,7 @@ bpy.types.Scene.modalPrint = BoolProperty(
         description = "Print in real time")
 
 
-class TestPanel(bpy.types.Panel):
+class MotionControl(bpy.types.Panel):
     bl_idname = "test_panel"
     bl_label = "Motion Control"
     bl_space_type = "VIEW_3D"
@@ -94,6 +94,10 @@ class TestPanel(bpy.types.Panel):
         obj = context.active_object
         scene = context.scene
         layout = self.layout
+        
+        row = layout.row()
+        row.label(text="", icon='CAMERA_DATA')
+        row.prop(obj, "name", text="Select")
         
         col = layout.column(align=True)
 
