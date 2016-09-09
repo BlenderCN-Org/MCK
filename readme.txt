@@ -1,1 +1,1 @@
-MCK (Motion Control KUKA)
+MCK
